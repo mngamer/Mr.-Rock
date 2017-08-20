@@ -341,8 +341,21 @@
             </actions>
         </event-block>
         <event-block sid="663512192119798">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition id="0" name="On key pressed" sid="486988064833232" type="Keyboard">
+                    <param id="0" name="Key">17 (Ctrl)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="659871505372999" type="Player">
+                    <param id="0" name="Instance variable">RageBar</param>
+                    <param id="1" name="Value">99</param>
+                </action>
+                <action id="-10" name="Set value" sid="195652592434116" type="Player">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">99</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="746520909951840">
             <conditions />
