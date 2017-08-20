@@ -319,11 +319,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-<<<<<<< HEAD
         <object-type global="1" name="Array" sid="717904498445840">
-=======
-        <object-type global="1" name="Array" sid="812484040112486">
->>>>>>> cbc024db3d1f03eb76d2a459e7e4023b9a825ab0
             <plugin id="Arr" />
         </object-type>
     </object-folder>
