@@ -85,14 +85,16 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="259418978907152" type="System" />
+                <action id="-25" name="Go to layout (by name)" sid="259418978907152" type="System">
+                    <param id="0" name="Layout">&quot;Test&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="598938929548089">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="168838945074384" type="Player">
                     <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Comparison">0</param>
+                    <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
@@ -337,6 +339,25 @@
             <actions>
                 <action id="-43" name="Go to next/previous layout" sid="936589469214462" type="System">
                     <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397998087286785">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="899087999527941" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="285747251085495" type="System">
+                    <param id="0" name="Object to create">enemy1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">352</param>
+                    <param id="3" name="Y">704</param>
+                </action>
+                <action id="-3" name="Create object" sid="346342731150990" type="System">
+                    <param id="0" name="Object to create">enemy1</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">912</param>
+                    <param id="3" name="Y">768</param>
                 </action>
             </actions>
         </event-block>
