@@ -4,16 +4,6 @@
     <name>Test</name>
     <events>
         <comment>Use the down arrow to allow the player to deliberately drop down through a jump-thru platform.</comment>
-        <event-block sid="703431030614372">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="386804732259109" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="716028402607744" type="Player" />
-            </actions>
-        </event-block>
         <comment>Allow WASD as alternate controls to arrow keys.</comment>
         <event-block sid="341534255337497">
             <conditions>
@@ -64,9 +54,6 @@
         <comment>Mirror the player&apos;s image so they appear facing the right way when moving left or right.</comment>
         <event-block any="1" sid="640073003016552">
             <conditions>
-                <condition id="0" name="On key pressed" sid="163901103431479" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
                 <condition id="0" name="On key pressed" sid="891854403565217" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
@@ -79,9 +66,6 @@
         </event-block>
         <event-block any="1" sid="934129751826948">
             <conditions>
-                <condition id="0" name="On key pressed" sid="756173698963274" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
                 <condition id="0" name="On key pressed" sid="777077872506523" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
@@ -326,6 +310,34 @@
                     <param id="1" name="Value">10</param>
                 </action>
                 <action id="-9" name="Destroy" sid="309496804952306" type="Projectile" />
+            </actions>
+        </event-block>
+        <event-block sid="994209006007322">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="636912430996845" type="Player">
+                    <param id="0" name="Object">Key</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Set collisions enabled" sid="762431141076970" type="Cage">
+                    <param id="0" name="Collisions">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="275486676872995" type="Cage">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="444205841728361" type="Key" />
+            </actions>
+        </event-block>
+        <event-block sid="531416449152596">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="248103450163764" type="Player">
+                    <param id="0" name="Object">Flag</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="936589469214462" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

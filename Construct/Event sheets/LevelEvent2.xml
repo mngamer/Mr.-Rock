@@ -4,197 +4,338 @@
     <name>LevelEvent2</name>
     <events>
         <comment>Use the down arrow to allow the player to deliberately drop down through a jump-thru platform.</comment>
-        <event-block sid="895237137151146">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="690399934024250" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="825418164334675" type="Player" />
-            </actions>
-        </event-block>
         <comment>Allow WASD as alternate controls to arrow keys.</comment>
-        <event-block sid="674215180168640">
+        <event-block sid="631881999584719">
             <conditions>
-                <condition id="2" name="Key is down" sid="298643364558922" type="Keyboard">
+                <condition id="2" name="Key is down" sid="236469111046421" type="Keyboard">
                     <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="614529995985646" type="Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="245442050519025" type="Player">
                     <param id="0" name="Control">2</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="683278593788007">
+        <event-block sid="769169980927143">
             <conditions>
-                <condition id="2" name="Key is down" sid="282542385502508" type="Keyboard">
+                <condition id="2" name="Key is down" sid="765401030846502" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="391490321275045" type="Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="250261519929446" type="Player">
                     <param id="0" name="Control">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="718383723264824">
+        <event-block sid="420399569541443">
             <conditions>
-                <condition id="2" name="Key is down" sid="396507494815944" type="Keyboard">
+                <condition id="2" name="Key is down" sid="936616857941312" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="367036077992081" type="Player" />
+                <action behavior="Platform" id="12" name="Fall through" sid="999192157259144" type="Player" />
             </actions>
         </event-block>
-        <event-block sid="912411420307035">
+        <event-block sid="859004440501198">
             <conditions>
-                <condition id="2" name="Key is down" sid="353875365949034" type="Keyboard">
+                <condition id="2" name="Key is down" sid="992711963170349" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="530555592302404" type="Player">
+                <action behavior="Platform" id="7" name="Simulate control" sid="118278772048001" type="Player">
                     <param id="0" name="Control">1</param>
                 </action>
             </actions>
         </event-block>
         <comment>Mirror the player&apos;s image so they appear facing the right way when moving left or right.</comment>
-        <event-block any="1" sid="639895005816994">
+        <event-block any="1" sid="392195365734726">
             <conditions>
-                <condition id="0" name="On key pressed" sid="888749069760973" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition id="0" name="On key pressed" sid="717943614030804" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="739161462116810" type="Keyboard">
                     <param id="0" name="Key">65 (A)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="618277349088213" type="Player">
+                <action id="7" name="Set mirrored" sid="463674838057219" type="Player">
                     <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="573094764105888">
+        <event-block any="1" sid="629813733499171">
             <conditions>
-                <condition id="0" name="On key pressed" sid="386351722314054" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="0" name="On key pressed" sid="982099725624820" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="508486886958467" type="Keyboard">
                     <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" sid="564503363246061" type="Player">
+                <action id="7" name="Set mirrored" sid="341267193118543" type="Player">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
         <comment>If the player falls off the bottom of the layout, restart the level.</comment>
-        <event-block sid="473686172730386">
+        <event-block sid="790346288123984">
             <conditions>
-                <condition id="-2" name="Compare Y" sid="909346074321136" type="Player">
+                <condition id="-2" name="Compare Y" sid="699612866407097" type="Player">
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="Y co-ordinate">LayoutHeight</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="797041255501765" type="System" />
+                <action id="-26" name="Restart layout" sid="279662828806378" type="System" />
             </actions>
         </event-block>
-        <event-block sid="778926418165477">
+        <event-block sid="995347913538392">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="602361455712319" type="Player">
+                <condition id="-7" name="Compare instance variable" sid="159196994937990" type="Player">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="741213292235497" type="Player">
-                    <param id="0" name="Animation">&quot;death&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-26" name="Restart layout" sid="829608195276990" type="System" />
+                <action id="-26" name="Restart layout" sid="185752651014852" type="System" />
             </actions>
         </event-block>
-        <event-block sid="889589226609948">
+        <event-block sid="651036763925260">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="176486335780538" type="enemy1">
+                <condition id="0" name="On collision with another object" sid="410330923372646" type="enemy1">
                     <param id="0" name="Object">Player</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="428133009853247" type="Player">
+                <action id="-12" name="Subtract from" sid="766656591374567" type="Player">
                     <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-                <action id="-11" name="Add to" sid="361428789374328" type="Player">
-                    <param id="0" name="Instance variable">RageBar</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">25</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="451481874074929">
+        <event-block sid="677977633080633">
             <conditions>
-                <condition id="-1" name="Every tick" sid="170202381934817" type="System" />
+                <condition id="-1" name="Every tick" sid="367461110002307" type="System" />
             </conditions>
             <actions>
-                <action id="-5" name="Set width" sid="886251457975425" type="HealthBar">
+                <action id="-5" name="Set width" sid="412292646308687" type="HealthBar">
                     <param id="0" name="Width">player.Health*5</param>
                 </action>
-                <action id="-5" name="Set width" sid="976904847495783" type="RageBar">
+                <action id="-5" name="Set width" sid="753774004309259" type="RageBar">
                     <param id="0" name="Width">player.RageBar*2.5</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="456132841230940">
+        <event-block sid="432034687339585">
             <conditions>
-                <condition id="-21" name="Is between values" sid="243336716244506" type="System">
+                <condition id="-21" name="Is between values" sid="773553062299174" type="System">
                     <param id="0" name="Value">player.RageBar</param>
                     <param id="1" name="Lower bound">0</param>
                     <param id="2" name="Upper bound">100</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Add to" sid="193638848194897" type="Player">
+                <action id="-11" name="Add to" sid="228456452812674" type="Player">
                     <param id="0" name="Instance variable">RageBar</param>
                     <param id="1" name="Value">1/100</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="358286646135624">
+        <event-block sid="748769465659700">
             <conditions>
-                <condition id="-18" name="On created" sid="739428066173186" type="enemy1" />
+                <condition id="-7" name="Compare instance variable" sid="989263422435619" type="enemy1">
+                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="733572228683782" type="enemy1" />
+                <action id="-11" name="Add to" sid="380827762262590" type="Player">
+                    <param id="0" name="Instance variable">RageBar</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="627824938748445">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="460069081219699" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="796824412212101" type="Player" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="860241608447583" type="Player">
+                    <param id="0" name="Object">Sword</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="553163451467865">
+            <conditions />
             <actions />
         </event-block>
-        <event-block sid="783665535492659">
+        <event-block sid="863975423866274">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="854740943693875" type="Player">
+                <condition id="-18" name="On created" sid="867431680576373" type="Sword" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="710219500908706" type="System">
+                    <param id="0" name="Seconds">1/4</param>
+                </action>
+                <action id="-9" name="Destroy" sid="274111198596363" type="Sword" />
+            </actions>
+        </event-block>
+        <event-block sid="692162113361015">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="518718185797547" type="Sword">
+                    <param id="0" name="Object">enemy1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="975329818010159" type="enemy1">
+                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                    <param id="1" name="Value">Sword.SwordDamage</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="538828858809122">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="762742744385891" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="636164698452355" type="Player" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="997413050860046" type="Player">
+                    <param id="0" name="Object">Sword</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="447315516194621">
+            <conditions>
+                <condition id="-23" name="While" sid="382939438398926" type="System" />
+                <condition id="-21" name="Is between values" sid="430181742019586" type="System">
+                    <param id="0" name="Value">player.RageBar</param>
+                    <param id="1" name="Lower bound">25</param>
+                    <param id="2" name="Upper bound">100</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="758636918992948" type="System">
+                    <param id="0" name="Value">player.Health</param>
+                    <param id="1" name="Lower bound">1</param>
+                    <param id="2" name="Upper bound">95</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="535855447573269" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="794490760201941" type="Player">
+                    <param id="0" name="Instance variable">RageBar</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-11" name="Add to" sid="495001860497995" type="Player">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-10" name="Set value" sid="442140472880515" type="Sword">
+                    <param id="0" name="Instance variable">SwordDamage</param>
+                    <param id="1" name="Value">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="375597704646171">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="320846303327842" type="Keyboard">
+                    <param id="0" name="Key">70 (F)</param>
+                </condition>
+                <condition id="7" name="Is mirrored" sid="165639960287099" type="Player" />
+                <condition id="-21" name="Is between values" sid="603373945393865" type="System">
+                    <param id="0" name="Value">Player.RageBar</param>
+                    <param id="1" name="Lower bound">10</param>
+                    <param id="2" name="Upper bound">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="105078244839960" type="Player">
+                    <param id="0" name="Object">Projectile</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="210121104722271" type="Projectile">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="691863012232252" type="Player">
+                    <param id="0" name="Instance variable">RageBar</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="199563696046610">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="323232539759552" type="Keyboard">
+                    <param id="0" name="Key">70 (F)</param>
+                </condition>
+                <condition id="7" inverted="1" name="Is mirrored" sid="350300357879233" type="Player" />
+                <condition id="-21" name="Is between values" sid="538896546872045" type="System">
+                    <param id="0" name="Value">Player.RageBar</param>
+                    <param id="1" name="Lower bound">10</param>
+                    <param id="2" name="Upper bound">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="638513846724832" type="Player">
+                    <param id="0" name="Object">Projectile</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="454285545944801" type="Player">
+                    <param id="0" name="Instance variable">RageBar</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="733771984505857">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="500217383315229" type="Projectile">
+                    <param id="0" name="Object">enemy1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="263937885629077" type="enemy1">
+                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Destroy" sid="979721587588246" type="Projectile" />
+            </actions>
+        </event-block>
+        <event-block sid="195844668228716">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="180266764160221" type="Player">
                     <param id="0" name="Object">Key</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="11" name="Set collisions enabled" sid="568333548349505" type="Cage">
+                <action id="11" name="Set collisions enabled" sid="575618782648026" type="Cage">
                     <param id="0" name="Collisions">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="306915126145718" type="Cage">
+                <action id="-15" name="Set visible" sid="886378662278257" type="Cage">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="890630470786486" type="Key" />
+                <action id="-9" name="Destroy" sid="196089398058124" type="Key" />
             </actions>
         </event-block>
-        <event-block sid="397118328535740">
+        <event-block sid="318592854224232">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="876998569651888" type="Player">
+                <condition id="0" name="On collision with another object" sid="478950648405676" type="Player">
                     <param id="0" name="Object">Flag</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-43" name="Go to next/previous layout" sid="158409974033973" type="System">
+                <action id="-43" name="Go to next/previous layout" sid="742713541912924" type="System">
                     <param id="0" name="Which">0</param>
                 </action>
             </actions>
