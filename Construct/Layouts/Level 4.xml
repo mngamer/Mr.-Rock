@@ -2,7 +2,7 @@
 <c2layout>
     <name>Level 4</name>
     <sid>586855957752319</sid>
-    <event-sheet>LevelEvent2</event-sheet>
+    <event-sheet>LevelEvent4</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -143,7 +143,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="enemy1" uid="98">
+                <instance type="enemy2" uid="98">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -151,7 +151,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <EnemyHealth1>20</EnemyHealth1>
+                        <EnemyHealth2>100</EnemyHealth2>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -178,11 +178,11 @@
                                 <active-on-start>Yes</active-on-start>
                                 <movement>Horizontal</movement>
                                 <wave>Sine</wave>
-                                <period>1</period>
+                                <period>4</period>
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>100</magnitude>
+                                <magnitude>50</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -190,11 +190,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1217.5</x>
-                        <y>413</y>
+                        <x>1059</x>
+                        <y>440</y>
                         <z>0</z>
-                        <width>683</width>
-                        <height>520</height>
+                        <width>469</width>
+                        <height>431</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

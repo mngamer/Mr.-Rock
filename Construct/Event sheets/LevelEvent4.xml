@@ -98,18 +98,22 @@
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="247058619978330" type="System" />
+                <action id="-10" name="Set value" sid="380600570464581" type="enemy2">
+                    <param id="0" name="Instance variable">EnemyHealth2</param>
+                    <param id="1" name="Value">100</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="692676270534806">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="810926933394118" type="enemy1">
+                <condition id="0" name="On collision with another object" sid="810926933394118" type="enemy2">
                     <param id="0" name="Object">Player</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-12" name="Subtract from" sid="272694230924747" type="Player">
                     <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">25</param>
+                    <param id="1" name="Value">50</param>
                 </action>
             </actions>
         </event-block>
@@ -143,17 +147,17 @@
         </event-block>
         <event-block sid="580649030738426">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="613690000474640" type="enemy1">
-                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                <condition id="-7" name="Compare instance variable" sid="613690000474640" type="enemy2">
+                    <param id="0" name="Instance variable">EnemyHealth2</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="881382218644455" type="enemy1" />
-                <action id="-11" name="Add to" sid="355737169931985" type="Player">
+                <action id="-9" name="Destroy" sid="881382218644455" type="enemy2" />
+                <action id="-10" name="Set value" sid="355737169931985" type="Player">
                     <param id="0" name="Instance variable">RageBar</param>
-                    <param id="1" name="Value">5</param>
+                    <param id="1" name="Value">99</param>
                 </action>
             </actions>
         </event-block>
@@ -194,8 +198,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="716766962026124" type="enemy1">
-                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                <action id="-12" name="Subtract from" sid="716766962026124" type="enemy2">
+                    <param id="0" name="Instance variable">EnemyHealth2</param>
                     <param id="1" name="Value">Sword.SwordDamage</param>
                 </action>
             </actions>
@@ -305,8 +309,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" sid="508837921289146" type="enemy1">
-                    <param id="0" name="Instance variable">EnemyHealth1</param>
+                <action id="-12" name="Subtract from" sid="508837921289146" type="enemy2">
+                    <param id="0" name="Instance variable">EnemyHealth2</param>
                     <param id="1" name="Value">10</param>
                 </action>
                 <action id="-9" name="Destroy" sid="651686849663753" type="Projectile" />

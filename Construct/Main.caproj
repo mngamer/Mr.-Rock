@@ -351,7 +351,7 @@
         <object-type global="1" name="enemy2" sid="836261408555009">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="EnemyHealth1" sid="394399422513331" type="number" />
+                <instance-variable name="EnemyHealth2" sid="394399422513331" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="117625588357252">
