@@ -115,6 +115,11 @@
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">50</param>
                 </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="443977287971061" type="Player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="320695617781209">
@@ -135,13 +140,13 @@
                 <condition id="-21" name="Is between values" sid="365658276637867" type="System">
                     <param id="0" name="Value">player.RageBar</param>
                     <param id="1" name="Lower bound">0</param>
-                    <param id="2" name="Upper bound">100</param>
+                    <param id="2" name="Upper bound">99</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Add to" sid="302849851888273" type="Player">
                     <param id="0" name="Instance variable">RageBar</param>
-                    <param id="1" name="Value">1/100</param>
+                    <param id="1" name="Value">10/100</param>
                 </action>
             </actions>
         </event-block>
@@ -200,7 +205,7 @@
             <actions>
                 <action id="-12" name="Subtract from" sid="716766962026124" type="enemy2">
                     <param id="0" name="Instance variable">EnemyHealth2</param>
-                    <param id="1" name="Value">Sword.SwordDamage</param>
+                    <param id="1" name="Value">15</param>
                 </action>
             </actions>
         </event-block>
@@ -311,7 +316,7 @@
             <actions>
                 <action id="-12" name="Subtract from" sid="508837921289146" type="enemy2">
                     <param id="0" name="Instance variable">EnemyHealth2</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">5</param>
                 </action>
                 <action id="-9" name="Destroy" sid="651686849663753" type="Projectile" />
             </actions>
@@ -341,6 +346,28 @@
             <actions>
                 <action id="-43" name="Go to next/previous layout" sid="289078122300539" type="System">
                     <param id="0" name="Which">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="999248013873123">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="167198984564625" type="enemy2" />
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="749950041191243" type="Player">
+                    <param id="0" name="Magnitude">10</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="188555961857880">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="671310394703737" type="enemy2" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="933312900184234" type="won">
+                    <param id="0" name="Text">&quot;WINNER WINNER CHICKEN DINNER&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -63,11 +63,11 @@
                 <behavior-type name="Platform" sid="621192015625219">
                     <behavior id="Platform" />
                 </behavior-type>
-                <behavior-type name="ScrollTo" sid="672691438028766">
-                    <behavior id="scrollto" />
-                </behavior-type>
                 <behavior-type name="Timer" sid="101258537247862">
                     <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="926419386012314">
+                    <behavior id="scrollto" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -363,12 +363,18 @@
                 <behavior-type name="Sine" sid="571222073907428">
                     <behavior id="Sin" />
                 </behavior-type>
+                <behavior-type name="Sine2" sid="678330320305494">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938653157853279" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="won" sid="499232610168399">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
