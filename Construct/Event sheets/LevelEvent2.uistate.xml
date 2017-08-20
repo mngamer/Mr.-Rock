@@ -15,6 +15,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <nest>68</nest>
         <nest>50</nest>
         <nest>32</nest>
+<<<<<<< HEAD
+=======
+        <nest>20</nest>
+>>>>>>> cbc024db3d1f03eb76d2a459e7e4023b9a825ab0
         <nest>18</nest>
     </condition-namecolumns>
     <events />
